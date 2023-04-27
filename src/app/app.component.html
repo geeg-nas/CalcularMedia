@@ -1,0 +1,16 @@
+<div class="card" style="width: 25rem" >
+  <img [src]="imagem" class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ Nome }}
+    </h5>
+    <p>A média do Aluno foi {{media}}</p>
+      <span *ngIf="media >= 7; else elseBlock" class="badge badge-success">Aluno aprovado</span>
+      <ng-template #elseBlock >
+       <span class="alert alert-danger">Aluno reprovado</span>
+      </ng-template>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
